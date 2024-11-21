@@ -1,41 +1,35 @@
-import tkinter as tk
-from tkinter import messagebox
-
-# Fungsi untuk menambah barang ke daftar belanja
-def tambah_barang():
-    nama_barang = entry_nama.get()
-    harga_barang = entry_harga.get()
-    
-    if nama_barang and harga_barang:
-        daftar_barang.insert(tk.END, f'{nama_barang} - Rp{harga_barang}')
-        entry_nama.delete(0, tk.END)
-        entry_harga.delete(0, tk.END)
-    else:
-        messagebox.showwarning("Input Tidak Lengkap", "Masukkan nama dan harga barang")
-
-# Buat jendela utama
-window = tk.Tk()
-window.title("Aplikasi Kasir")
-
-# Label dan Entry untuk Nama Barang
-label_nama = tk.Label(window, text="Nama Barang:")
-label_nama.pack()
-entry_nama = tk.Entry(window)
-entry_nama.pack()
-
-# Label dan Entry untuk Harga Barang
-label_harga = tk.Label(window, text="Harga Barang:")
-label_harga.pack()
-entry_harga = tk.Entry(window)
-entry_harga.pack()
-
-# Tombol untuk menambah barang
-tombol_tambah = tk.Button(window, text="Tambah Barang", command=tambah_barang)
-tombol_tambah.pack()
-
-# Listbox untuk menampilkan daftar belanja
-daftar_barang = tk.Listbox(window)
-daftar_barang.pack()
-
-# Jalankan aplikasi
-window.mainloop()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to My GitHub Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Awesome GitHub Page!</h1>
+    <p>Here is where you can explore my projects and much more!</p>
+  </header>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Description of project 1...</p>
+    </div>
+    <div class="project-card">
+      <h3>Project 2</h3>
+      <p>Description of project 2...</p>
+    </div>
+    <div class="project-card">
+      <h3>Project 3</h3>
+      <p>Description of project 3...</p>
+    </div>
+  </section>
+  <footer>
+    <p>Made with ❤️ by <a href="https://github.com/username" target="_blank">username</a></p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
